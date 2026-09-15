@@ -1,6 +1,5 @@
 package com.example;
 
-import com.example.items.Product;
 import com.google.zxing.BarcodeFormat;
 import com.google.zxing.MultiFormatWriter;
 import com.google.zxing.WriterException;
@@ -10,21 +9,24 @@ import javax.imageio.ImageIO;
 import java.awt.image.BufferedImage;
 import java.io.File;
 import java.io.IOException;
-import java.util.List;
+
+import static com.example.ILabTask.labTaskOne;
 
 public class Main {
+
     public static void main(String[] args) {
         System.out.println("Hello from Java Crashtest!");
 
         computeQrCode("unusual_qr_code", 500, "unusualsquad.com");
 
-        computeLab1();
+        labTaskOne.compute();
 
         //computeLab2(); TO DO
 
         //computeLab3(); TO DO
 
-        computeLab4();
+        //computeLab4(); TO DO
+
     }
 
     public static void computeQrCode(String name, int size, String url) {
@@ -39,15 +41,6 @@ public class Main {
             System.err.println("No QRcode: " + e.getMessage());
             e.printStackTrace();
         }
-    }
-
-    public static void computeLab1(){
-        TaskLabOne task1 = new TaskLabOne();
-        List<Product> diabeties = java.util.List.of(
-                new Product("Sucre", 6, 60),
-                new Product("Chocolat", 18, 5));
-
-        System.out.println(task1.calc(diabeties, 2, true);
     }
 
 

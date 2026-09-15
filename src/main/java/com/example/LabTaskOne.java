@@ -4,7 +4,11 @@ import com.example.items.Product;
 
 import java.util.List;
 
-public class TaskLabOne {
+public class LabTaskOne extends AbstractTask implements ComputableTask {
+    protected LabTaskOne() {
+        super("Lab 1 — Refactoring an Order Calculation");
+    }
+
     /**
      * Premium customer: 10% discount.
      * VIP customer: 20% discount.
@@ -39,6 +43,12 @@ public class TaskLabOne {
         return total;
     }
 
+    @Override
+    public void compute() {
+        List<Product> diabeties = java.util.List.of(
+                new Product("Sucre", 6, 60, 100),
+                new Product("Chocolat", 18, 5, 10));
 
-
+        System.out.println(calc(diabeties, 2, true));
+    }
 }
